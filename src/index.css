@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Islamic Theme Colors */
+  --primary: 145 63% 29%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 43 74% 49%;
+  --secondary-foreground: 0 0% 10%;
+  --background: 60 33% 97%;
+  --foreground: 145 63% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 145 63% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 145 63% 15%;
+  --muted: 145 20% 92%;
+  --muted-foreground: 145 20% 40%;
+  --accent: 43 74% 66%;
+  --accent-foreground: 145 63% 15%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 145 30% 85%;
+  --input: 145 30% 85%;
+  --ring: 145 63% 29%;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Islamic Pattern Background */
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23166534' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Arabic Font */
+.arabic-text {
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
+  line-height: 2.5;
+}
+
+/* Gradient Islamic Background */
+.gradient-islamic {
+  background: linear-gradient(135deg, #0d5a3b 0%, #1a7a4e 50%, #0d5a3b 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #d4a574 0%, #c9a227 50%, #d4a574 100%);
+}
+
+/* Glass Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(22, 101, 52, 0.1);
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(22, 101, 52, 0.15);
+}
+
+/* Section Divider */
+.section-divider {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #166534, #d4a574, #166534, transparent);
+  margin: 3rem 0;
+}
+
+/* Quran Verse Styling */
+.verse-container {
+  background: linear-gradient(145deg, #f8faf8 0%, #e8f5e9 100%);
+  border-right: 4px solid #166534;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #166534;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #14532d;
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Stagger Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
